@@ -1,0 +1,4 @@
+###build
+
+gcc -g -shared -fPIC -o libcrash.so libcrash.c -fno-omit-frame-pointer -rdynamic
+gcc -g -rdynamic -fno-omit-frame-pointer -o main_app main.c -lbacktrace -L. -lcrash
